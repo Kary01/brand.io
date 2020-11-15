@@ -24,6 +24,7 @@ body{
     font-family: var(--secondary-font);
 }
 
+/*header*/
 header{
     display: flex;
     flex-wrap: wrap;
@@ -63,3 +64,31 @@ header{
 .header__nav--list li a:hover{
     color: white;
 } 
+
+/*main*/
+main{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.main__section{
+    padding: 15%;
+}
+
+.products_section{
+    display: flex;
+    justify-content: center;
+    height:200px;
+    padding: 15%;
+    background-image: url('../assets/images/curve.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.product--box .product--card{
+    padding: 2em;
+    margin: 0 1em;
+    background-color: white;
+}
