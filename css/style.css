@@ -184,6 +184,7 @@ main{
 }
 
 .mentions__section h2{
+    font-size: 2rem;
     font-family: var(--primary-font);
     font-weight: 700px;
 }
@@ -246,6 +247,7 @@ footer p{
     color: white;
 }
 
+
 /*Animations*/
 .fadeIn{
     animation-duration: 4s;
@@ -280,6 +282,7 @@ footer p{
         transform: translate3d(0, 0,0);
     }
 }
+
 
 /*Media queries*/
 @media screen and (max-width: 768px){

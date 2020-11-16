@@ -1,0 +1,94 @@
+main{
+    display: grid;
+    grid-template-columns: minmax(auto, 900px);
+    justify-content: center;
+    padding: 1em;
+}
+
+h2{
+    margin: 1em auto;
+    font-size: 2rem;
+    font-family: var(--primary-font);
+    font-weight: 700px;
+}
+
+h3{
+    margin-bottom: 1em;
+    font-size: 1.6rem;
+    font-family: var(--primary-font);
+    font-weight: 700px;
+}
+
+.products__container{
+    display: grid;
+    grid-template: repeat(3, 200px) / repeat(4, 1fr);
+    grid-template-areas: "prod-one prod-one prod-one prod-two"
+                        "prod-three prod-four prod-four prod-four"
+                        "prod-five prod-five prod-five prod-six";
+}
+
+.products--img{
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.products--des{
+    padding: 3em;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+/*description*/
+.prod-one{
+    grid-area: prod-one;
+}
+
+.prod-four{
+    grid-area: prod-four;
+}
+
+.prod-five{
+    grid-area: prod-five;
+}
+
+/*images*/
+.prod-two{
+    grid-area: prod-two;
+    background-image: url('../assets/images/box2.png');
+}
+
+.prod-three{
+    grid-area: prod-three;
+    background-image: url('../assets/images/box1.png');
+}
+
+.prod-six{
+    grid-area: prod-six;
+    background-image: url('../assets/icons/lient-cat.ico');
+}
+
+
+/*media queries*/
+@media screen and (max-width: 768px){
+    .products__container{
+        grid-template-areas: "prod-one prod-one prod-two prod-two"
+                            "prod-three prod-three prod-four prod-four"
+                            "prod-five prod-five prod-six prod-six";
+    }
+}
+
+@media screen and (max-width: 425px){
+    .products__container{
+        grid-template: repeat(6, 200px) / repeat(1, 1fr);
+        grid-template-areas: "prod-two" 
+                        "prod-one"
+                        "prod-three"
+                        "prod-four"
+                        "prod-six"
+                        "prod-five";
+    }
+}
