@@ -207,12 +207,13 @@ main{
 }
 
 .mentions-card .card-image{
-    width: 180px;
+    width: 100px;
     height: 100px;
     margin: 1em auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    border-radius: 50%;
 }
 
 .person-one{
@@ -245,6 +246,42 @@ footer p{
     color: white;
 }
 
+/*Animations*/
+.fadeIn{
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    will-change: transform;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.fadeInUp{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    will-change: transform;
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translate3d(0, 100%,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0,0);
+    }
+}
+
+/*Media queries*/
 @media screen and (max-width: 768px){
     .mentions__container{
         grid-template-columns: repeat(2, 300px);
