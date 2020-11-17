@@ -1,0 +1,109 @@
+:root{
+    /*colors*/
+    --light-orange: #ffa724;
+    --dark-blue: #134e6f;
+    --dark-orange: #ff6150;
+    --light-blue: #1ac0c6;
+    --light-gray: #dee0e6;
+    /*fonts*/
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+}
+
+.main__sale{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: minmax(auto, 900px);
+    justify-content: center;
+    padding: 1em;
+}
+
+.sale__container{
+    display: grid;
+    grid-template: repeat(1, 400px) / repeat(2, 1fr);
+    grid-template-areas: "sale--view sale--form";
+    margin: 2em 0;
+    gap: 1em 
+}
+
+/*----------------------------------- product*/
+.sale--view{
+    grid-area: sale--view;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "prod--image"
+                        "prod-desc";
+    box-shadow: 0 4px 8px rgba(116, 107, 107, 0.16);                    
+}
+
+.prod--image{
+    background-image: url('../assets/images/box2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.prod-desc{
+    margin: auto;
+    text-align: center;
+    padding: 3em;
+}
+
+.prod-desc h3{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/*----------------------------------- form*/
+.sale--form{
+    grid-area: sale--form;
+    padding: 3em;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(116, 107, 107, 0.16); 
+}
+
+
+.sale--form form input{
+    display: block;
+    width: 90%;
+    height: 3em;
+    margin: 1em auto;
+    padding: .5em;
+    border-radius: 3px;
+    border: 1px solid #d8d8d8;
+    outline: none;
+}
+
+.sale--form form span{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.sale--form form .btn{
+    display: block;
+    width: 50%;
+    height: 30px;
+    margin: 2em auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: var(--light-orange);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    .sale__container{
+        display: grid;
+        grid-template: repeat(2, 500px) / repeat(1, 1fr);
+        grid-template-areas: "sale--form"
+                            "sale--view";
+        margin: 2em 0;
+        gap: 1em 
+    }
+}

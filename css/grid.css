@@ -1,5 +1,6 @@
-main{
+.main__products{
     display: grid;
+    height: 100vh;
     grid-template-columns: minmax(auto, 900px);
     justify-content: center;
     padding: 1em;
@@ -42,7 +43,7 @@ h3{
     text-align: justify;
 }
 
-/*description*/
+/*----------------------------------- descriptions*/
 .prod-one{
     grid-area: prod-one;
 }
@@ -55,7 +56,7 @@ h3{
     grid-area: prod-five;
 }
 
-/*images*/
+/*----------------------------------- images*/
 .prod-two{
     grid-area: prod-two;
     background-image: url('../assets/images/box2.png');
@@ -72,7 +73,7 @@ h3{
 }
 
 
-/*media queries*/
+/*----------------------------------- media queries*/
 @media screen and (max-width: 768px){
     .products__container{
         grid-template-areas: "prod-one prod-one prod-two prod-two"
