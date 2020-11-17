@@ -1,6 +1,6 @@
 .main__products{
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
     grid-template-columns: minmax(auto, 900px);
     justify-content: center;
     padding: 1em;
